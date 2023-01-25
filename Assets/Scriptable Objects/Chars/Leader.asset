@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3204b03c92feb4c8f6961b8f0a756a, type: 3}
+  m_Name: Leader
+  m_EditorClassIdentifier: 
+  hp: 9
+  attack: 3
+  attackCd: 0.4
+  spd: 2.5
+  bullet: {fileID: 11400000, guid: afff903b1aa9e45468533e8ddad796dc, type: 2}
+  charAnim: {fileID: 22100000, guid: 22d5972d9156698448935faca1b69308, type: 2}
+  charSprite: {fileID: -100124087, guid: 592452fbdd13d7d43b016a1992ee367b, type: 3}

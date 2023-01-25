@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Antitank
+  m_Controller: {fileID: 9100000, guid: 389c56a9fdee3e04cb156c9fb7c9f39a, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 9642a1d2c257e4842bd2b2826dbca613, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: bb333cfefc49d684b8fe1374d7c170a8, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 5c3d0bd312bec844783fc2d622c08e93, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7333feff9e5ad1d4d92625c023b1d6de, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 562ddc486627985458cfb410da05a3f0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 658a6421604c5c346895b9287a55ad51, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 57aa1e73bbae11743b1d373204ba9fb8, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 437ecc9baa489d4499f353b000871354, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 162098de20803cf4d858ab1876825ef7, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: ad94ed724b20ca94fae1264fb2bae117, type: 2}
