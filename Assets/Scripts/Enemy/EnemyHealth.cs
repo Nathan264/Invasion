@@ -10,12 +10,16 @@ public class EnemyHealth : MonoBehaviour
     private AudioSource enemyAudio;
 
     [SerializeField] private float knockbackTime;
-    private float health;
+    [SerializeField] private float health;
 
-    void Start()
+    private void Start()
     {
-        health = enemy.EnemyObj.health;
         enemyAudio = GetComponent<AudioSource>();
+    }
+
+    private void OnEnable()
+    {
+        FillHealth();
     }
 
     private void OnTriggerEnter2D(Collider2D other) 
@@ -23,6 +27,14 @@ public class EnemyHealth : MonoBehaviour
         if (other.CompareTag("Bullet"))
         {
             TakeDamage(other.attachedRigidbody.velocity);
+        }
+    }
+
+    private void FillHealth()
+    {
+        if (enemy.EnemyObj)
+        {
+            health = enemy.EnemyObj.health;
         }
     }
 
