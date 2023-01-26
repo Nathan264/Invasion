@@ -95,7 +95,7 @@ public class WaveController : MonoBehaviour
     {
         remainingEnemies = initialEnemies;
 
-        if (initialEnemies < maxEnemies)
+        if (currentWave > 1 && initialEnemies < maxEnemies)
         {
             initialEnemies++;
         }
