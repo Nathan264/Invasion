@@ -40,6 +40,12 @@ public class Selection : MonoBehaviour
             btn.onClick.AddListener(() => SelectChar(btnChar));
             btn.onClick.AddListener(() => PlaceCursor(btn));
 
+            if (i == 0)
+            {
+                SelectChar(btnChar);
+                PlaceCursor(btn);
+            }
+
             initialPos += plusPos;
         }
     }
@@ -47,6 +53,12 @@ public class Selection : MonoBehaviour
     public void PlayGame()
     {
         SceneManager.LoadScene("Lvl1");
+    }
+
+    public void BackToMenu()
+    {
+        gameObject.SetActive(false);
+        mainMenu.SetActive(true);
     }
 
     public void SelectChar(Char selectedChar)
@@ -60,14 +72,7 @@ public class Selection : MonoBehaviour
         selectionImage.gameObject.SetActive(true);
         selectionImage.transform.SetParent(btn.transform);
         selectionImage.GetComponent<RectTransform>().localPosition = new Vector3(0, 40, 0);
-    
-    }
-
-    public void BackToMenu()
-    {
-        gameObject.SetActive(false);
-        mainMenu.SetActive(true);
-    }
+    }    
 
     private void ClearCharInfo()
     {
