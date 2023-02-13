@@ -28,6 +28,16 @@ public class EnemyHealth : MonoBehaviour
         {
             TakeDamage(other.attachedRigidbody.velocity);
         }
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D other) 
+    {
+        if (other.gameObject.CompareTag("Player")) 
+        {
+            StartCoroutine(Knockback(-enemy.Rig.velocity * 3));
+        }
+        
     }
 
     private void FillHealth()
