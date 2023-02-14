@@ -37,7 +37,34 @@ public class EnemyHealth : MonoBehaviour
         {
             StartCoroutine(Knockback(-enemy.Rig.velocity * 3));
         }
-        
+    }
+
+    private void OnCollisionStay2D(Collision2D other) 
+    {
+        if (other.gameObject.CompareTag("Walls"))
+        {
+            StartCoroutine("CheckIfStucked");
+        }    
+    }
+
+    private void OnCollisionExit2D(Collision2D other) 
+    {
+        if (other.gameObject.CompareTag("Walls"))
+        {
+            StopCoroutine("CheckIfStucked");
+        } 
+    }
+
+    private IEnumerator CheckIfStucked()
+    {
+        Vector3 pos = transform.position;
+
+        yield return new WaitForSeconds(5);
+
+        if (pos == transform.position)
+        {
+            Die();
+        }
     }
 
     private void FillHealth()
