@@ -58,6 +58,15 @@ public class EnemyMove : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter2D(Collision2D other) 
+    {
+        if (other.gameObject.CompareTag("Obstacle") || other.gameObject.CompareTag("Walls"))    
+        {
+            xDir = xDir * -1;
+            yDir = yDir * -1;
+        }
+    }
+
     private void Move()
     {
         move = new Vector2(xDir, yDir);
