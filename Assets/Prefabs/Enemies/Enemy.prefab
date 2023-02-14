@@ -257,12 +257,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   player: {fileID: 0}
-  move: {x: 0, y: 0}
   timeToTurn: 2
+  detectionArea: 5
   xDir: 0
   yDir: 0
-  detectionArea: 5
-  routineIsRunning: 0
 --- !u!114 &4090428334675305536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,3 +277,4 @@ MonoBehaviour:
   pData: {fileID: 11400000, guid: 53da12ae0222503478a108f3766cf31b, type: 2}
   hitSound: {fileID: 8300000, guid: 46e9c4d30ee037f4eae4aa06adff407b, type: 3}
   knockbackTime: 0.3
+  health: 0
